@@ -15,7 +15,7 @@ const MapView = () => {
     const [equipments, setEquipments] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
 
-    // modal ver maiis
+    // modalVerMais
     const [selectedEquipment, setSelectedEquipment] = useState(null);
     const [showModal, setShowModal] = useState(false);
     // modal laterel
@@ -32,6 +32,7 @@ const MapView = () => {
         (filterState ? equipment.stateHistory.length && equipment.stateHistory[0].stateInfo?.name === filterState : true) &&
         (filterModel ? equipment.model?.name === filterModel : true)
     );
+
 
     const handleOpenSideModal = (equipment) => {
         setSideModalEquipment(equipment);
@@ -51,7 +52,13 @@ const MapView = () => {
         setShowModal(true);
     };
 
-    // Função para gerar ícones personalizados
+    const handleToggleHistory = (equipmentId) => {
+        setActivePaths((prev) => ({
+            ...prev,
+            [equipmentId]: !prev[equipmentId],
+        }));
+    };
+
     const getStatusIcon = (state) => {
         let color;
 

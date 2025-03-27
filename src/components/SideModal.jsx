@@ -6,13 +6,13 @@ const SideModal = ({ showSideModal, setShowSideModal, sideModalEquipment, calcul
     return (
         <div
             className="fixed inset-0 flex items-center justify-center z-[99999] bg-black/50 backdrop-blur-md"
-            onClick={() => setShowSideModal(false)} // Fechar ao clicar fora
+            onClick={() => setShowSideModal(false)}
         >
             <div
                 className="bg-white p-6 rounded-xl shadow-2xl w-[400px] h-[80vh] overflow-hidden border border-gray-300 relative transition-all transform scale-100"
-                onClick={(e) => e.stopPropagation()} // Impedir que o clique no modal feche ele
+                onClick={(e) => e.stopPropagation()}
             >
-                {/* Botão de Fechar */}
+
                 <button
                     onClick={() => setShowSideModal(false)}
                     className="absolute top-3 right-3 text-gray-500 hover:text-gray-700 text-2xl font-bold transition-transform transform hover:scale-110"
@@ -20,12 +20,10 @@ const SideModal = ({ showSideModal, setShowSideModal, sideModalEquipment, calcul
                     &times;
                 </button>
 
-                {/* Título */}
                 <h2 className="text-2xl font-bold mb-4 text-center text-gray-900">{sideModalEquipment.name}</h2>
 
-                {/* Conteúdo rolável */}
                 <div className="overflow-y-auto max-h-[65vh] space-y-4 px-2">
-                    {/* Modelo */}
+
                     <p className="flex justify-between text-gray-700">
                         <strong className="text-gray-800">Modelo:</strong>
                         <span className="text-gray-600">
@@ -33,7 +31,6 @@ const SideModal = ({ showSideModal, setShowSideModal, sideModalEquipment, calcul
                         </span>
                     </p>
 
-                    {/* Posição */}
                     <p className="flex flex-col text-gray-700">
                         <strong className="text-gray-800">Posição:</strong>
                         <span className="text-gray-600">
@@ -41,7 +38,6 @@ const SideModal = ({ showSideModal, setShowSideModal, sideModalEquipment, calcul
                         </span>
                     </p>
 
-                    {/* Estado Atual */}
                     <div className="flex justify-between items-center">
                         <strong className="text-gray-800">Estado Atual:</strong>
                         <span
@@ -60,7 +56,6 @@ const SideModal = ({ showSideModal, setShowSideModal, sideModalEquipment, calcul
                         </span>
                     </div>
 
-                    {/* Produtividade */}
                     <div className="flex justify-between">
                         <strong className="text-gray-800">Produtividade:</strong>
                         <span className="text-gray-600">
@@ -68,7 +63,6 @@ const SideModal = ({ showSideModal, setShowSideModal, sideModalEquipment, calcul
                         </span>
                     </div>
 
-                    {/* Ganho Total */}
                     <div className="flex justify-between">
                         <strong className="text-gray-800">Ganho Total:</strong>
                         <span className="text-gray-600">

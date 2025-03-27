@@ -9,7 +9,7 @@ const HistoryModal = ({ showModal, setShowModal, selectedEquipment }) => {
                 <h2 className="text-2xl font-bold mb-6 text-center">{selectedEquipment.name} - Histórico de Posições</h2>
 
                 {/* Conteúdo com a tabela rolável */}
-                <div className="overflow-y-auto max-h-[65vh] mb-6"> {/* Área rolável do conteúdo */}
+                <div className="overflow-y-auto max-h-[65vh] mb-6">
                     <table className="min-w-full table-auto">
                         <thead className="sticky top-0 bg-white border-b">
                             <tr>
