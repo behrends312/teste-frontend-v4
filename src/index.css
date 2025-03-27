@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+#root {
+    height: 100vh;
+    /* Garante que o container ocupe toda a altura da tela */
+    margin: 0;
+    /* Remove a margem */
+}
+
+.leaflet-container {
+    height: 100%;
+    /* Garante que o mapa ocupe 100% do container */
+    width: 100%;
+    /* Garante que o mapa ocupe 100% da largura */
+}
